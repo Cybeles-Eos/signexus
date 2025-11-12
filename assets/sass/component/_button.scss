@@ -2,14 +2,15 @@
 @use "color" as *;
 
 .btn {
-    min-width: 150px;
+    min-width: 120px;
     font-family: $font-primary;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-    padding: 10px 15px;
+    padding: 10px 5px;
     border: 1px solid $color-primary;
-    border-radius: 50px;
+    border-radius: 10px;
+
     &--primary {
         background-color: $color-primary;
         color: #fff;
