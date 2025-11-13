@@ -2100,6 +2100,7 @@ footer .footer-sub div svg:hover {
   border-radius: 12px;
   padding: 7px;
   margin-top: 2.3rem;
+  user-select: none;
 }
 .page--service .section--tools__navigations button {
   background-color: transparent;
@@ -2109,6 +2110,7 @@ footer .footer-sub div svg:hover {
   font-weight: 500;
   padding: 10px 16px;
   border-radius: 10px;
+  user-select: none;
 }
 .page--service .section--tools__navigations .active-tool {
   background-color: #F9F5EC !important;

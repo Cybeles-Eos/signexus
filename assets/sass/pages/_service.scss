@@ -170,7 +170,7 @@
             border-radius: 12px;
             padding: 7px;
             margin-top: 2.3rem;
-
+            user-select: none;
             button{
                background-color: transparent;
                outline: none;
@@ -180,6 +180,7 @@
                font-weight: 500;
                padding: 10px 16px;
                border-radius: 10px;
+               user-select: none;
             }
             .active-tool{
                background-color: #F9F5EC !important;
