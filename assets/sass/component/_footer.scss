@@ -2,6 +2,270 @@
 
 footer {
     width: 100%;
-    height: 30rem;
+    // height: 30rem;
     background-color: $color-primary;
+    padding: 64px 1rem 24px 1rem;
+
+    .footer-cta{
+        max-width: 1350px;
+        margin: 0 auto;
+        margin-bottom: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        &--txt{
+
+            &__title{
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 110%;
+                color: #fff;
+                margin-bottom: 4px;
+                svg{
+                    margin-bottom: 3px;
+                }
+            }
+            &__label{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 130%;
+                letter-spacing: 1%;
+                color: #fff;
+                max-width: 500px;
+            }
+        }
+        &--fields{
+            display: flex;
+            gap: 16px;
+            input{
+                width: 250px;
+                height: 53px;
+                border-radius: 12px;
+                padding: 16px;
+                background-color: #fff;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 100%;
+                border: none;
+
+                &::placeholder{
+                    color: #BABABA;
+                }
+            }
+            &__btn{
+                width: 102px;
+                height: 53px;
+                background-color: #fff;
+                border-radius: 10px;
+                color: $color-primary;
+                font-weight: 500;
+                line-height: 100%;
+                letter-spacing: 1%;
+
+            }
+        }
+    }
+    .footer-main{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1350px;
+        margin: 0 auto;
+        gap: 1.5rem;
+
+        &--info{
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            img{
+                width: 174px;
+            }
+            h4{
+                font-size: 24px;
+                line-height: 100%;
+                letter-spacing: 1%;
+                font-weight: 500;
+                color: #fff;
+
+            }
+        }
+        &--links{
+            display: flex;
+            gap: 64px;
+            padding-right: 1.8rem;
+
+            .footer-main--links-box{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                p{
+                    color: #fff;
+                    margin: 0;
+                    font-weight: 600;
+                }
+                ul{
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+                    li{
+                        a{
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #fff;
+                            margin: 0;
+                            &:hover{
+                                color: $color-darkgold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-sub{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        align-items: center;
+        max-width: 1350px;
+        margin: 0 auto;
+        margin-top: 64px;
+        p{
+            margin: 0;
+            color: #fff;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        ul{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+
+            li{
+                a{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #fff;
+                    margin: 0;
+                    line-height: 100% !important;
+                    text-align: center !important;
+                    //color: antiquewhite;
+                    &:hover{
+                        color: $color-darkgold;
+                    }
+                }
+            }
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .6rem;
+
+            svg{
+                color: #fff;
+                &:hover{
+                    color: $color-darkgold;
+
+                }
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        .footer-cta{
+            flex-direction: column-reverse;
+            align-items: center;
+
+            &--txt{
+                &__title{
+                    text-align: center;
+                }
+                &__label{
+                    text-align: center;
+                }
+            }
+        }
+        .footer-main{
+            flex-direction: column;
+            row-gap: 3rem;
+            justify-content: center;
+            align-items: center;
+            &--info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 13px;
+                h4{
+                    text-align: center;
+                }
+            }
+            &--links{
+                display: flex;
+                gap: 64px;
+                padding-right: 1.8rem;
+
+                .footer-main--links-box{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    p{
+                        text-align: center;
+                    }
+                    ul{
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .footer-sub{
+            flex-direction: column-reverse;
+            gap: 10px;
+            p{
+                margin-bottom: .5rem;
+                margin-top: .5rem;
+            }
+
+            ul{
+                flex-wrap: wrap;
+                gap: 18px;
+                row-gap: 10px;
+                align-items: center;
+            }
+        }
+    }
+    @media (max-width: 592px){
+        .footer-cta{
+            &--fields{
+                flex-direction: column;
+                &--txt{
+                    &__label{
+                        max-width: 200px !important;
+                    }
+                }
+                &__btn{
+                    width: 250px;
+
+                }
+            }
+        }
+        .footer-main{
+            &--info{
+
+                h4{
+                    max-width: 400px;
+                }
+            }
+            &--links{
+                gap: 54px;
+                flex-direction: column;
+            }
+        }
+    }
 }

@@ -30,6 +30,13 @@ header {
                 align-items: center;
                 justify-content: center;
                 gap: .6rem;
+                svg{
+                    color: #fff;
+                    &:hover{
+                        color: $color-darkgold;
+
+                    }
+                }
             }
             @media (max-width: 592px) {
                 height: auto;
