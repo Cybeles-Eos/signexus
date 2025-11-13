@@ -112,7 +112,8 @@ header {
                     text-decoration: none;
                 }
                 .btn-head-primary{
-                    width: 160px;
+                    // min-width: 160px;
+                    padding: 0 1.4rem;
                     color: $color-secondary;
                 }
                 .btn-head-secondary{
@@ -122,6 +123,24 @@ header {
                     font-weight: 500;
                 }
             }
+        }
+    }
+    .nav-menu-dark{
+        background-color: $color-secondary !important;
+
+        a{
+            color: $color-primary !important;
+        }
+        .btn-head-primary,
+        .btn-head-secondary{
+            border: 1px solid $color-primary !important;
+        }
+        .btn-dark-primary{
+            color: $color-primary !important;
+        }
+        .btn-dark-secondary{
+            background-color: $color-primary !important;
+            color: $color-secondary !important;
         }
     }
 
@@ -186,6 +205,9 @@ header {
         .hamburger-menu.active span:nth-child(3) {
         transform: translateY(-8.5px) rotate(-45deg);
         }
+    }
+    .nav-mobile-dark{
+        background-color: $color-secondary;
     }
 
     @media (max-width: 992px) {
