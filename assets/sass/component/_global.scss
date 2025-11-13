@@ -71,6 +71,9 @@ h1{
     font-weight: 700;
     line-height: 110%;
     font-family: 'DM sans', sans-serif;
+    @media (max-width: 492px) {
+        font-size: 40px;
+    }
 }
 
 h2 {
@@ -80,6 +83,9 @@ h2 {
     margin-bottom: 25px;
     letter-spacing: 1%;
     font-family: "DM sans", sans-serif;
+    @media (max-width: 492px) {
+        font-size: 38px;
+    }
 }
 
 h3{
