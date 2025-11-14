@@ -1752,6 +1752,11 @@ footer .footer-sub div svg:hover {
   font-size: 14px;
   color: #151515;
 }
+@media (max-width: 592px) {
+  .page--about .section--testimonial .pabt-st-main {
+    height: auto !important;
+  }
+}
 .page--about .section--testimonial__vector {
   position: absolute;
   left: 0;

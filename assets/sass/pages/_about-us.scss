@@ -256,8 +256,11 @@
                }
 
             }
-
-
+         }
+         @media (max-width: 592px) {
+            .pabt-st-main{
+               height: auto !important;
+            }
          }
          &__vector{
             position: absolute;
