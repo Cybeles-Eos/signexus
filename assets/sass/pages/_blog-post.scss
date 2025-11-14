@@ -1,0 +1,11 @@
+@use "../component/color" as *;
+
+.page--blog-post{
+   .section{
+      &--hero{
+         width: 100%;
+         height: 30rem;
+         background-color: rebeccapurple;
+      }
+   }
+}
