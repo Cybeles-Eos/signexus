@@ -1,0 +1,159 @@
+@use "../component/color" as *;
+
+.page--faqs{
+   .section{
+      &--hero{
+         width: 100%;
+         background-color: #F9F5EC;
+         position: relative;
+         &__main{
+            max-width: 1350px;
+            height: 445px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            gap: 2rem;
+            overflow: hidden;
+            z-index: 2;
+            .img-hero-pfaq{
+               position: absolute;
+               left: -1.3rem;
+               bottom: 0;
+               max-width: 500px;
+            }
+            .blck{
+               min-width: 450px;
+               @media (max-width: 992px) {
+                  display: none;
+               }
+            }
+            div{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               padding: 122px 1rem;
+
+               h1, p{
+                  max-width: 760px;
+               }
+               h1{
+                  margin-top: 5rem;
+                  @media (max-width: 492px) {
+                     font-size: 40px;
+                  }
+               }
+            }
+            @media (max-width: 992px) {
+               .img-hero-pfaq{
+                  position: static;
+               }
+               div{
+                  padding-bottom: 10px;
+                  h1, p{
+                     text-align: center;
+                  }
+                  h1{
+                     margin-bottom: 1.3rem;
+                  }
+               }
+               height: auto;
+               flex-direction: column-reverse;
+               align-items: center;
+            }
+            @media (max-width: 522px) {
+               .img-hero-pserv{
+                  width: 100%;
+               }
+            }
+
+         }
+         .faq-vec{
+            position: absolute;
+            left: -1rem;
+            
+            bottom: 0;
+         }
+      }
+      &--faqlist{
+         padding: 112px 1rem;
+         max-width: 1350px;
+         margin: 0 auto;
+
+         &__main{
+            display: flex;
+            justify-content: space-between;
+            gap: 80px;
+            margin-bottom: 80px;
+            &__info{
+               width: 40%;
+               max-width: 500px;
+               color: #000;
+               
+               h2{
+                  margin-bottom: 24px;
+               }
+            }
+            &__qa-con{
+               width: 60%;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               gap: 16px;
+
+               .sf-qa-c-box{
+                  display: flex;
+                  width: 100%;
+                  padding: 27px;
+                  background-color: #F3F3F3;
+                  border-radius: 12px;
+                  flex-direction: column;
+                  &__question{
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     gap: 20px;
+                     // background-color: #000;
+                     h4{
+                        font-size: 20px;
+                        font-weight: 500;
+                        margin: 0;
+                     }
+                     .show-ans{
+                        outline: none;
+                        background-color: transparent;
+                     }
+                     .minus-icon {
+                        display: none;
+                     }
+                  }
+                  &__answer{
+                     margin-top: 1rem;
+                     padding-right: 1.5rem;
+                     p{
+                        max-width: 660px;
+                        font-weight: 500;
+                     }
+                     display: none;
+                  }
+               }
+               .active-faq{
+                  background-color: #F9F5EC !important;
+
+                  .sf-qa-c-box__answer{
+                     display: block !important;
+                  }
+               }
+            }
+            @media (max-width: 992px) {
+               flex-direction: column;
+               gap: 40px;
+               &__info,
+               &__qa-con{
+                  width: 100%;
+               }
+            }
+         }
+
+      }
+   }
+}
