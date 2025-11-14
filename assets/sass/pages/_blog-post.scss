@@ -3,9 +3,159 @@
 .page--blog-post{
    .section{
       &--hero{
-         width: 100%;
-         height: 30rem;
-         background-color: rebeccapurple;
+         padding: 112px 1rem;
+         padding-top:  189px;
+         max-width: 920px;
+         margin: 0 auto;
+
+         .back-blog-list{
+            display: block;
+            color: $color-primary;
+            margin-bottom: 48px;
+            text-decoration: none;
+         }
+         h1{
+            color: #000;
+         }
+         &__nav{
+            width: 100%;
+            //background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 48px;
+
+            .pbl-s-h-n-info{
+               display: flex;
+               align-items: center;
+               gap: 10px;
+               margin-top: 16px;
+               p{
+                  margin: 0;
+                  color: #000;
+                  font-size: 14px;
+               }
+               span{
+                  
+                  margin: 0;
+                  min-width: 5px;
+                  min-height: 5px;
+                  display: block;
+                  border-radius: 10px;
+                  background-color: $color-primary;
+               }
+            }
+            .pbl-s-h-n-links{
+               display: flex;
+               align-items: center;
+               gap: 10px;
+
+               a{
+                  min-width: 35px;
+                  min-height: 35px;
+                  border-radius: 50px;
+                  background-color: #F9F5EC;
+                  text-decoration: none;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  svg{
+                     color: #000;
+                  }
+                  &:hover{
+                     svg{
+                        color: $color-darkgold;
+                     }
+                  }
+               }
+            }
+            @media (max-width: 692px) {
+               flex-direction: column;
+               row-gap: 1rem;
+               align-items: flex-start;
+            }
+         }
+         img{
+            width: 100%;
+            max-height: 487px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+         }
+         @media (max-width: 992px) {
+            padding-top: 140px;
+            .back-blog-list{
+               margin-bottom: 28px;
+            }
+         }
+      }
+      &--content{
+         padding: 0 1rem 112px 1rem;
+         max-width: 920px;
+         margin: 0 auto;
+
+         img{
+            width: 100%;
+            max-height: 487px;
+            //aspect-ratio: 1;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+         }
+
+         h2{
+            font-size: 32px;
+         }
+      }
+      &--related{
+         max-width: 1350px;
+         margin: 0 auto;
+
+         padding: 112px 1rem;
+         
+         h2{
+            color: #000;
+            font-size: 40px;
+         }
+         &__con{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 32px;
+            
+            &--box{
+               // max-width: 416px;
+               border-radius: 20px;
+               padding: 24px;
+               color: #242424;
+               text-decoration: none;
+               img{
+                  border-radius: 20px;
+                  // max-width: 368px;
+                  object-fit: cover;
+                  object-position: center;
+               }
+               h3{
+                  margin-top: 24px;
+                  margin-bottom: 8px;
+                  font-weight: 600;
+               }
+               &:hover{
+                  background-color: #F9F5EC;
+               }
+            }
+            @media (max-width: 992px) {
+               grid-template-columns: 1fr 1fr;
+               gap: 20px;
+            }
+            @media (max-width: 692px) {
+               grid-template-columns: 1fr;
+               gap: 14px;
+            }
+         }
+         @media (max-width: 992px) {
+            padding-top: 20px;
+         }
       }
    }
 }
