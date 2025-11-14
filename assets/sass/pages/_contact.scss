@@ -4,8 +4,115 @@
    .section{
       &--hero{
          width: 100%;
-         height: 20rem;
-         background-color: rebeccapurple;
+         //height: 20rem;
+         padding: 112px 1rem;
+         padding-top: 189px !important;
+         background-color: #F9F5EC;
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         p, h1{
+            color: #000000;
+            max-width: 768px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+         }
+         h1{
+            font-weight: 700;
+            margin-bottom: 24px;
+         }
+         img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+         }
       }
+      &--main-from{
+         padding: 112px 1rem;
+         background-image: url('../../images/main-form-bg-min.jpg');
+         background-position: center;
+         background-size: cover;
+      
+         .pc-smf-form-box{
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(9px);
+            box-shadow:
+            inset 0 1px 1px rgba(255, 255, 255, 0.3), 
+            0 4px 30px rgba(0, 0, 0, 0.2); 
+            padding: 32px;
+            max-width: 664px;
+            margin: 0 auto;
+
+            h2, p{
+               color: #fff;
+               margin-bottom: 24px;
+               max-width: 590px !important;
+            }
+
+
+            &--fbox{
+               display: flex;
+               flex-direction: column;
+               gap: 16px;
+
+               input[type=text], textarea{
+                  padding: 12px 16px;
+                  background: rgba(255, 255, 255, 0.4);
+                  backdrop-filter: blur(7px);
+                  -webkit-backdrop-filter: blur(9px);
+                  border-radius: 6px;
+                  border: none;
+                  font-size: 14px;
+                  font-weight: 600;
+
+                  &::placeholder{
+                     font-weight: 500;
+                  }
+               }
+               textarea{
+                  resize: none;
+               }
+               input[type="text"].filled { 
+                  background: rgba(255, 255, 255, 0.8) !important;
+               }
+               &__group-one{
+                  display: flex;
+                  gap: 16px;
+                  
+                  input{
+                     width: 100%;
+                  }
+                  @media (max-width: 592px) {
+                     flex-direction: column;
+                  }
+               }
+               &__group-two{
+                  display: flex;
+                  gap: 16px;
+                  
+                  input{
+                     width: 100%;
+                  }
+                  @media (max-width: 592px) {
+                     flex-direction: column;
+                  }
+               }
+               button{
+                  background-color: $color-primary;
+                  color: #fff;
+                  font-weight: 600;
+                  padding: 16px 1rem;
+                  border-radius: 6px;
+               }
+            }
+
+         }
+      }
+
    }
 }

@@ -137,7 +137,29 @@
 
    <main class="main-content page--contact">
       <section class="section--hero">
-
+         <h1>Let’s Build a Smarter Connection</h1>
+         <p>Whether you have a question, need support, or want to explore how Sig Nexus can empower your organization, our team is here to help.</p>
+         <img src="./images/contact-vector.svg" alt="">
+      </section>
+      <section class="section--main-from">
+         <div class="pc-smf-form-box">
+            <h2>We’d Love to Hear From You</h2>
+            <p>Reach out to our team for inquiries about our platform, partnership opportunities, or technical support. Fill out the form below and we’ll get back to you within one business day.</p>
+            <form class="pc-smf-form-box--fbox">
+               <div class="pc-smf-form-box--fbox__group-one">
+                  <input name="firstname" type="text" placeholder="First name" required>
+                  <input name="lastname" type="text" placeholder="Last name" required>
+               </div>
+               <div class="pc-smf-form-box--fbox__group-two">
+                  <input name="email" type="text" placeholder="Email" required>
+                  <input name="phone-number" type="text" placeholder="Phone Number" required>
+               </div>
+               <textarea name="message" id="" rows="10" placeholder="Type your message..."></textarea>
+               <button type="submit">
+                  Submit
+               </button>
+            </form>
+         </div>
       </section>
    </main>
 
@@ -171,8 +193,8 @@
                   <ul>
                      <li><a href="index.html">Home</a></li>
                      <li><a href="about.html">About Us</a></li>
-                     <li><a href="/contact.html">Contact Us</a></li>
-                     <li><a href="#">Blogs</a></li>
+                     <li><a href="contact.html">Contact Us</a></li>
+                     <li><a href="blog.html">Blogs</a></li>
                      <li><a href="#">Serviced Locations</a></li>
                   </ul>
                </div>
@@ -234,7 +256,23 @@
          </div>
       </div>
    </footer>
+   <script>
+      //Form Input Field
+      function updateFilled(el){
+         if (el.value && el.value.trim() !== "") el.classList.add('filled');
+         else el.classList.remove('filled');
+      }
 
+      document.querySelectorAll('input[type="text"]').forEach(function(input){
+         input.addEventListener('input', function(){ updateFilled(this); });
+         input.addEventListener('paste', function(){ setTimeout(()=>updateFilled(this), 0); });
+         updateFilled(input);
+      });
+
+      setTimeout(function(){
+         document.querySelectorAll('input[type="text"]').forEach(updateFilled);
+      }, 500);
+   </script>
    <!-- Modal -->
    <div class="mobile-modal">
       <a href="index.html">Home</a>
