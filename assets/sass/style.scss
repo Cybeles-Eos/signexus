@@ -7,6 +7,7 @@
 @use "component/mobile" as *;
 @use "component/footer" as *;
 
+
 // Pages 
 @use "pages/home" as *;
 @use "pages/about-us" as *;
@@ -17,4 +18,5 @@
 @use "pages/blog-post" as *;
 @use "pages/faqs" as *;
 @use "pages/legal" as *;
+@use "pages/serviced-location" as *;
 
